@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript basic</title>
+</head>
+<body>
+<h1>Javascript basics</h1>
+</body>
+<script type="text/javascript">
+	//JAVASCRIPT VARIABLE 
+
+	var name = 'Adam' //Global scope
+
+	function function1(){
+		var name = 'Sam' //local scope
+		console.log(name)
+	}
+
+	function1()
+
+	/*
+	123name  -> not valid
+	_name -> valid
+	name -> valid
+	NAME -> valid
+	*/
+
+	//OPERATERS
+	var a = 5
+	var b = 10
+
+	//1) Arithematic operators
+	//2) Comparison Operators
+
+
+	//addintion (+)
+	console.log('Addintion')
+	var c = a + b
+	console.log(c)
+
+	//substration (-)
+
+	console.log('substration')
+	var c = a - b
+	console.log(c)
+
+	//multiplication
+	 console.log('multiplication')
+	 var c = a * b
+	 console.log(c)
+
+	//division
+
+	 console.log('division')
+	 var c = a / b 
+	 console.log(c)
+
+	/*
+	 exponential (**)
+	 modulus (%)
+	 increment (++)
+	 decrement (--)
+	 */
+
+	 //Comparison Operators
+
+	 /*
+		== equal to
+		=== equal value and type
+		!= not equal
+		!== not equal value not equal type
+		> greater than
+		< less than
+		<= less than equeal to
+		>= greater than equal
+		? ternary operator
+	*/
+
+	//DATATYPES
+
+	//string
+
+	var name = 'ADAM' //string
+
+	//integer
+
+	var x = 10 //interger
+
+	var score = 10.5 //floating-point number
+
+	//boolean
+
+	var a =  true
+	var b =  false
+
+	//Object data typr
+
+	var employees = {
+		'name' : 'Sam',
+		'age' : 26,
+		'gender' : 'Male',
+		'languages' : ['Hindi', 'Telugu', 'English']
+	}
+
+	var langs = 'Langs: ' + employees.languages
+
+
+	//Arrays
+
+	var techs = ['Html', 'Css', 'Javascript', 'Python']
+
+	console.log('techs[0]: ' + techs[0])
+
+	var getscore = function(){
+		var points = 15
+		var score = points*1.2
+		return score
+	}
+
+	console.log(getscore())
+
+	console.log(typeof(name))
+	console.log(typeof(a))
+	console.log(typeof(c))
+
+	//Functions
+
+	//define function
+	function functionname(name){
+		//code...
+		alert('Welcome: ' + name)
+
+		return name
+	}
+
+	functionname(name) //calling the function
+
+	var Name = functionname(name) //assign value returned   
+	console.log(Name)
+
+	//Conditional statements
+
+	var a = 15
+	var b = 10
+
+	//IF STATEMENT
+
+	if (a == b) {
+		//code
+		console.log('a == b');
+	}
+
+	if (a > b) {
+		//code
+		console.log('a > b');
+	}
+
+	if (a < b) {
+		//code
+		console.log('a < b');
+	}
+
+
+	//ELSE STATEMENT
+
+	if (a != b) {
+		//code
+		console.log('a != b');
+	}
+	else{
+		console.log('else block executed..., i.e a == b')
+	}
+
+
+	x = 5
+	switch(a > 5){
+		case true:
+		console.log('true');
+		break;
+		case  false:
+		 console.log('false');
+		 break;
+		 default:
+		 console.log('default executed..')
+	}
+
+
+
+	//LOOPS
+	//1) for loop 
+	//2) while
+	//3) do while
+	for(x = 0; x < 10; x++){
+		console.log(x)
+	}
+	var state = true
+	var count = 0
+	while(state){
+		console.log(state)
+		if(count == 10){
+		state = false
+		}
+	count++
+	}
+	//Type conversions
+	
+	var b = String(a)
+	console.log(typeof(b))
+
+	var c = parseInt(b)
+
+	console.log(typeof(c))
+
+	var Object_string = '{"name" : 10, "age": 25 }'
+
+	console.log(Object_string)
+	console.log(typeof(Object_string))
+	var res = JSON.parse(Object_string)
+	console.log(res)
+</script>
+</html>
