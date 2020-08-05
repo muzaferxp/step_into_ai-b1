@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+	<style type="text/css">
+		.tab_view{
+			display: none;
+		}
+
+		.active_tab{
+			display: block;
+
+		}
+
+		.active_span{
+			background-color: rgba(0,0,0,0.1);
+			padding: 2px 5px;
+			border-radius: 20px
+		}
+
+
+
+
+
+	</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">Hidden brand</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<div style="background-color: #d7e6f2;display: flex;" class="p-2">
+	<div class="text-center" onclick="switch_tab('tab_1')">
+		<div class="px-4 py-2 ml-4 btn bg-white">
+			<i class="fas fa-home"></i>
+		</div><br>
+		<small class="active_span spn text-center" id="spn1">Home</small>
+	</div>
+
+	<div class="text-center" onclick="switch_tab('tab_2')">
+		<div class="px-4 py-2 ml-4 btn bg-white">
+			<i class="fas fa-chart-line"></i>
+		</div><br>
+		<small class="spn text-center" id="spn2">Dashboard</small>
+	</div>
+
+	<div class="text-center" onclick="switch_tab('tab_3')">
+		<div class="px-4 py-2 ml-4 btn bg-white">
+			<i class="far fa-user-circle"></i>
+		</div><br>
+		<small class="spn text-center" id="spn3">Profile</small>
+	</div>
+
+</div>
+
+<div class="container">
+	<div id="tab_1" class="tab_view active_tab">
+		<div class="card">
+		<h1 style="background-color: #5c6bc0;color:white;padding: 5px;margin: 0;text-align: center;">What is AI?</h1>
+		<img src='images/Ai.jpeg' id='img1'  />
+		<p style="padding: 0px 15px;font-size:20px">
+			AI" redirects here. For other uses, see AI (disambiguation) and Artificial intelligence (disambiguation).
+			In computer science, artificial intelligence (AI), sometimes called machine intelligence, is intelligence demonstrated by machines, unlike the natural intelligence displayed by humans and animals. Leading AI textbooks define the field as the study of "intelligent agents": any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals.[1] Colloquially, the term "artificial intelligence" is often used to describe machines (or computers) that mimic "cognitive" functions that humans associate with the human mind, such as "learning" and "problem solving".[2]
+		</p>
+	</div>
+	</div>
+	<div id="tab_2" class="tab_view">
+		
+		<div id="accordion">
+			  <div class="card">
+			    <div class="card-header" id="headingOne">
+			      <h5 class="mb-0">
+			        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			          Collapsible Group Item #1
+			        </button>
+			      </h5>
+			    </div>
+
+			    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+			      <div class="card-body">
+			        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+			      </div>
+			    </div>
+			  </div>
+			  <div class="card">
+			    <div class="card-header" id="headingTwo">
+			      <h5 class="mb-0">
+			        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			          Collapsible Group Item #2
+			        </button>
+			      </h5>
+			    </div>
+			    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+			      <div class="card-body">
+			        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+			      </div>
+			    </div>
+			  </div>
+			  <div class="card">
+			    <div class="card-header" id="headingThree">
+			      <h5 class="mb-0">
+			        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			          Collapsible Group Item #3
+			        </button>
+			      </h5>
+			    </div>
+			    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+			      <div class="card-body">
+			        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+	</div>
+	<div id="tab_3" class="tab_view">
+		<div class="text-center">
+			<img src="images/Ai.jpeg" style="height: 100px;width: 100px;object-fit: cover;border-radius: 50%">
+			<p>Adam smith</p>
+		</div>
+	</div>
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+	<script type="text/javascript">
+
+		function switch_tab(tab){
+			tab_list = document.getElementsByClassName('tab_view')
+
+			for(x=0; x < tab_list.length; x++){
+
+				tab_list[x].style.display = 'none'
+			}
+			
+			//document.getElementById(tab).style.display = 'block'
+			$('#' + tab).fadeIn('slow')
+
+			snp_list = document.getElementsByClassName('spn')
+
+			for(x=0; x < snp_list.length; x++){
+
+				snp_list[x].classList.remove('active_span')
+			}
+
+			//tab_1
+			//spn1
+
+			document.getElementById('spn' + tab.split('_')[1]).classList.add('active_span')
+			
+		}
+
+
+	</script>
+
+</body>
+</html>
