@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery indepth</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+	<style type="text/css">
+       .red{
+       	color: red;
+       }
+       .success{
+       	color: green;
+       }
+       .danger{
+       	color: red;
+       }
+       .info{
+       	color: cyan;
+       }
+	</style>
+</head>
+<body class="bg-light">
+	<div class="container bg-white my-4 p-4">
+
+		<h1 id="header" class="header">Jquery</h1>
+
+		<a href="https://alekya.ai"></a>
+
+
+		<label>Search technology: </label><br>
+		<h5 id="status" class=""></h5>
+		<div class="d-flex">
+			<input type="text" list="techs" id="search_input" class="form-control">
+			<div>
+				<button class="btn btn-success btn-sm" id="search_btn">Search</button>
+			</div>
+		</div>
+
+
+	
+	  <datalist id="techs">
+			<option value="html">
+			<option value="css">
+			<option value="javascript">
+	  </datalist>
+  
+
+		<ul id="techs_list">
+			
+		</ul>	
+
+
+	</div>
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+	<script type="text/javascript">
+
+		var techs =  ['Artificial intelligence','ajax','android','asp.net','Azure','bash','big data','bitbucket','blockchain','bootstrap','bottle','c programming','centos','Cloud Storage','devops', 'DbVisualizer', 'hadoop','python', 'html','javascript', 'jquery']
+
+		console.log(techs)
+
+		function set_data() {
+
+			for(x=0; x<techs.length;x++){
+				document.getElementById('techs_list').innerHTML += `<li>${techs[x]}</li>`
+				$('#techs').append(`<option value="${techs[x]}">`)
+			}
+
+		}
+
+		set_data()
+
+
+
+		// var elm = document.getElementById('header')
+		// elm.innerHTML = 'JavaScript'
+
+
+		//Jquery selectors
+
+		//with id
+		//$('#header').html('JavaScript')
+
+		//with tags
+		$('h1').html('Jquery')
+
+		//with classes
+		$('.header').html('JavaScript')
+
+		//$('#header').hide()
+
+		document.getElementById('header').style.display = 'block'
+
+		var link = $('#header').attr('class', 'red')
+
+		var newlink = $('.header').attr('id')
+
+		console.log(newlink)
+
+		$('#header').removeAttr('class')
+
+
+		$('#search_btn').click(function() {
+
+
+
+			var text = $('#search_input').val()
+			// alert(text)
+
+			if(text != ''){
+
+			if(techs.includes(text)){
+
+				//alert('element found')
+
+				$('#techs_list').text('')
+
+				$('#techs_list').append(`<li>${text}</li>`)
+
+				$('#status').text('element found')
+
+				$('#status').attr('class', 'success')
+
+			}
+			else{
+
+				//alert('element not found')
+				$('#status').text('element not found')
+				$('#status').attr('class', 'danger')
+
+			}
+		}
+		else{
+			$('#status').text('Please Enter technology name')
+			$('#status').attr('class', 'success')
+
+			$('#techs_list').text('')
+
+			set_data()
+
+
+		}
+
+
+		})
+
+		// $('#search_btn').click(function() {
+		// 		var text = $('#search_input').val().toLowerCase()
+
+		// 		alert(text)
+
+		// 		for(x in techs){
+		// 			elm = techs[x].toLowerCase()
+
+		// 			if(elm.split(' ').includes(text)){
+		// 				alert('Element found')
+						
+		// 			}
+		// 		}
+
+		// 	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	</script>
+</body>
+</html>
